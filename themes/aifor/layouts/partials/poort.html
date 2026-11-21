@@ -1,30 +1,40 @@
-{{- /* De patrijspoort: abstracte golfbanden in een ronde uitsnede. Context: dict "id" (uniek) en "label". */ -}}
+{{- /* De patrijspoort: een funky jaren-70 vis tussen de golven, in een ronde uitsnede. Context: dict "id" (uniek) en "label". */ -}}
 {{- $id := .id | default "poort" -}}
 <svg class="poort-beeld" viewBox="0 0 400 400" role="img" aria-label="{{ .label }}">
   <defs>
     <clipPath id="{{ $id }}-cirkel"><circle cx="200" cy="200" r="200"/></clipPath>
+    <clipPath id="{{ $id }}-lijf"><path d="M78 196C118 118 252 110 304 192C252 272 118 276 78 196Z"/></clipPath>
     <filter id="{{ $id }}-korrel" x="0" y="0" width="100%" height="100%">
       <feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" stitchTiles="stitch"/>
       <feColorMatrix type="saturate" values="0"/>
-      <feComponentTransfer><feFuncA type="table" tableValues="0 .22"/></feComponentTransfer>
+      <feComponentTransfer><feFuncA type="table" tableValues="0 .2"/></feComponentTransfer>
     </filter>
   </defs>
   <g clip-path="url(#{{ $id }}-cirkel)">
-    <rect width="400" height="400" fill="#081f2a"/>
-    <circle cx="282" cy="96" r="38" fill="#ff6a3d" opacity=".95"/>
-    <g fill="none" stroke="#fff1dc" stroke-width="1.5" opacity=".55">
-      <path d="M-20 70C60 40 130 40 200 70S340 100 420 70"/>
-      <path d="M-20 92C60 62 130 62 200 92S340 122 420 92"/>
-      <path d="M-20 114C60 84 130 84 200 114S340 144 420 114"/>
+    <rect width="400" height="400" fill="#0d2f3f"/>
+    <path fill="#2bb3a3" d="M-20 300C60 260 130 260 200 300S340 340 420 300V420H-20Z"/>
+    <path fill="#ffc23d" d="M-20 330C60 290 130 290 200 330S340 370 420 330V420H-20Z"/>
+    <path fill="#ff6a3d" d="M-20 360C60 320 130 320 200 360S340 400 420 360V420H-20Z"/>
+    <g fill="none" stroke="#fff1dc" stroke-width="4" stroke-linecap="round" opacity=".7">
+      <path d="M20 90C60 70 100 70 140 90"/>
+      <path d="M260 60C300 40 340 40 380 60"/>
     </g>
-    <path fill="#2bb3a3" d="M-20 150C60 110 130 110 200 150S340 190 420 150V176C340 216 270 216 200 176S60 136 -20 176Z"/>
-    <path fill="#ffc23d" d="M-20 188C60 148 130 148 200 188S340 228 420 188V210C340 250 270 250 200 210S60 170 -20 210Z"/>
-    <path fill="#ff6a3d" d="M-20 222C60 182 130 182 200 222S340 262 420 222V296C340 336 270 336 200 296S60 256 -20 296Z"/>
-    <path fill="#0d2f3f" d="M-20 308C60 268 130 268 200 308S340 348 420 308V420H-20Z"/>
-    <g fill="none" stroke="#fff1dc" stroke-width="1.5" opacity=".4">
-      <path d="M-20 340C60 300 130 300 200 340S340 380 420 340"/>
-      <path d="M-20 362C60 322 130 322 200 362S340 402 420 362"/>
+    <g fill="none" stroke="#fff1dc" stroke-width="4">
+      <circle cx="58" cy="140" r="9"/>
+      <circle cx="40" cy="108" r="6"/>
+      <circle cx="66" cy="82" r="12"/>
     </g>
+    <path fill="#2bb3a3" d="M146 148C170 86 246 86 266 156Z"/>
+    <path fill="#2bb3a3" d="M168 246C186 300 236 304 244 240Z"/>
+    <path fill="#ffc23d" d="M292 192L366 124C350 168 350 216 366 260Z"/>
+    <path fill="#ff6a3d" d="M78 196C118 118 252 110 304 192C252 272 118 276 78 196Z"/>
+    <g clip-path="url(#{{ $id }}-lijf)" fill="none" stroke="#ffc23d" stroke-width="14">
+      <path d="M186 110C170 160 170 230 186 280"/>
+      <path d="M236 110C220 160 220 230 236 280"/>
+    </g>
+    <circle cx="128" cy="180" r="17" fill="#fff1dc"/>
+    <circle cx="132" cy="180" r="8" fill="#0d2f3f"/>
+    <path d="M92 210C100 218 110 220 120 216" fill="none" stroke="#0d2f3f" stroke-width="4" stroke-linecap="round"/>
     <rect width="400" height="400" filter="url(#{{ $id }}-korrel)"/>
   </g>
 </svg>
