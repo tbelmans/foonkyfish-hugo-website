@@ -1,7 +1,7 @@
 ---
 title: "Over Foonkyfish"
 kop: "Over de vis"
-description: "Wie zit er achter Foonkyfish? Het verhaal van een vis die tegen de stroom in zwemt: hoe het begon, wat we anders doen en waar we naartoe zwemmen."
+description: "Foonkyfish is een Belgisch softwarebedrijf dat eigen producten zoals AI for WP en HAYAGO bouwt, en software op maat voor wie slimmer wil werken."
 layout: "over"
 url: "/over/"
 hoofdstukken:
@@ -12,21 +12,21 @@ hoofdstukken:
     titel: "De eerste slag"
     tekst: "[Het eerste project, de eerste klant of het moment waarop het begon te swingen.]"
   - nr: "03"
-    titel: "Tegen de stroom"
-    tekst: "[Wat Foonkyfish anders doet dan de rest van de school, en waarom dat zo belangrijk is.]"
+    titel: "Eigen vangst"
+    tekst: "We bouwen niet alleen voor anderen. Met AI for WP en HAYAGO maken we onze eigen producten. Zo weten we uit eigen ervaring wat het vraagt om software te lanceren en te laten groeien."
   - nr: "04"
     titel: "Vandaag"
-    tekst: "[Waar Foonkyfish nu staat, wie er mee zwemt en waar de vis naartoe wil.]"
+    tekst: "Vandaag bouwen we webapps, SaaS-platformen, AI-toepassingen en WordPress op maat voor ondernemers en organisaties die slimmer willen werken. En onze eigen producten zwemmen gewoon mee."
 citaat:
   tekst: "[Een zin die Foonkyfish in één adem samenvat, bijvoorbeeld een uitspraak van de oprichter.]"
   wie: "[Naam], [functie]"
 waarden:
-  - kop: "Ritme boven regels."
-    tekst: "[Wat dit voor jullie betekent in de praktijk.]"
-  - kop: "Kleur bekennen."
-    tekst: "[Wat dit voor jullie betekent in de praktijk.]"
-  - kop: "Nooit droog op het strand."
-    tekst: "[Wat dit voor jullie betekent in de praktijk.]"
+  - kop: "Werkend boven perfect op papier."
+    tekst: "Een idee wordt pas iets als het draait. We bouwen snel iets dat je kunt aanraken, en verbeteren het van daaruit."
+  - kop: "Zelf in het water."
+    tekst: "We bouwen ook onze eigen producten. Wat we daar leren, nemen we mee in elk project voor jou."
+  - kop: "Slimmer, niet harder."
+    tekst: "Software moet werk uit handen nemen, niet erbij maken. Dat is de toets voor alles wat we bouwen."
 ---
 
-Foonkyfish is **[wie of wat]**, opgericht in **[jaar]** in **[plaats]**. We **[doen wat]** voor **[voor wie]**, en dat doen we zoals een vis die swingt: met lef, met kleur en altijd een beetje tegen de stroom in.
+Foonkyfish is een **Belgisch softwarebedrijf** dat apps en software op maat ontwikkelt, van eerste idee tot werkende software. We bouwen eigen producten, zoals **AI for WP** en **HAYAGO**, en software op maat voor ondernemers en organisaties die slimmer willen werken.

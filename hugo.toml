@@ -7,8 +7,8 @@ enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
-  tagline = "Een vis die swingt"
-  description = "Foonkyfish is [wat Foonkyfish doet] voor [voor wie]. Een vis die tegen de stroom in zwemt, op zijn eigen ritme."
+  tagline = "Apps die ideeën vooruithelpen"
+  description = "Foonkyfish is een Belgisch softwarebedrijf dat apps en software op maat bouwt: webapps, SaaS-platformen, AI-toepassingen en WordPress."
   email = "[e-mailadres]"
   telefoon = "[telefoonnummer]"
   adres = "[adres]"

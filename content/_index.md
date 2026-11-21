@@ -1,25 +1,28 @@
 ---
 title: "Foonkyfish"
-seotitle: "Foonkyfish — een vis die swingt"
-description: "Foonkyfish is [wat Foonkyfish doet] voor [voor wie]. Een vis die tegen de stroom in zwemt, op zijn eigen ritme. Ontdek het aanbod en hap toe."
+seotitle: "Foonkyfish — apps en software op maat uit België"
+description: "Foonkyfish is een Belgisch softwarebedrijf: webapps, SaaS-platformen, AI-toepassingen en WordPress op maat. Van eerste idee tot werkende software."
 hero:
-  kicker: "Vers gevangen in [plaats]"
-  lijn: "Een vis die swingt."
-  intro: "Foonkyfish is [wat Foonkyfish doet] voor [voor wie]. Niet braaf met de school mee, maar met een draai in de staart."
-  knop: "Bekijk het aanbod"
+  kicker: "Software op maat · België"
+  lijn: "Wij bouwen apps die ideeën vooruithelpen."
+  intro: "Webapps, SaaS-platformen, AI-toepassingen en WordPress op maat. Van eerste idee tot werkende software, met een draai in de staart."
+  knop: "Bekijk wat we bouwen"
 watis:
   label: "Wat is Foonkyfish?"
-  titel: "Gewoon zwemmen kan iedereen."
+  titel: "Gewoon meezwemmen kan iedereen."
 netTitel: "Wat er in het net zit"
 statement:
-  kop: "Tegen de *stroom* in. Op de groove."
-  tekst: "[Eén of twee zinnen over wat Foonkyfish anders maakt: je aanpak, je stijl, waarom mensen bij jou terechtkomen en niet bij de rest van de school.]"
+  kop: "Van *idee* tot werkende software."
+  tekst: "We denken mee vanaf de eerste schets en bouwen door tot het draait. Voor ondernemers en organisaties die slimmer willen werken."
+producten:
+  titel: "Eigen vangst"
+  tekst: "We bouwen niet alleen voor anderen. We maken ook onze eigen producten, en wat we daar leren, zit in elk project dat we voor jou bouwen."
 haptoe:
   kop: "Hap toe."
-  tekst: "Een vraag, een idee of gewoon zin om kennis te maken? Stuur een berichtje. Wij bijten graag terug."
+  tekst: "Heb je een idee dat vooruit moet? Of werk je met software die slimmer kan? Vertel het ons. Wij bijten graag terug."
   knop: "Neem contact op"
 ---
 
-Foonkyfish **[doet wat precies]** voor **[welke mensen of bedrijven]**, in **[plaats of regio]**.
+Foonkyfish is een **Belgisch softwarebedrijf** dat apps en software op maat ontwikkelt: webapps, SaaS-platformen, AI-toepassingen en WordPress.
 
-[Vertel hier in twee of drie zinnen waarom Foonkyfish bestaat: wat je maakt of aanbiedt, wat iemand eraan heeft en hoe het voelt om met jullie samen te werken.]
+We bouwen onze eigen producten, zoals **AI for WP** en **HAYAGO**, én software op maat voor ondernemers en organisaties die slimmer willen werken.

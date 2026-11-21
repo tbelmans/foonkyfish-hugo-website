@@ -1,18 +1,20 @@
 ---
 title: "Contact"
 kop: "Hap toe."
-description: "Contact opnemen met Foonkyfish: mail naar [e-mailadres], bel [telefoonnummer] of kom langs in [plaats]. We antwoorden snel en bijten graag terug."
+description: "Een idee voor een app, SaaS of AI-toepassing? Neem contact op met Foonkyfish via [e-mailadres] of [telefoonnummer]. We denken graag met je mee."
 layout: "contact"
 url: "/contact/"
 faq:
+  - vraag: "Ik heb alleen een idee. Is dat genoeg?"
+    antwoord: "Ja. We vertrekken graag van een eerste idee en werken het samen met jou uit tot werkende software."
+  - vraag: "Wat voor software bouwen jullie?"
+    antwoord: "Webapps, SaaS-platformen, AI-toepassingen en WordPress op maat, voor ondernemers en organisaties die slimmer willen werken."
+  - vraag: "Wat kost software op maat?"
+    antwoord: "[Hoe jullie prijzen opbouwen: per project, per uur of per sprint, en vanaf welk bedrag ongeveer.]"
   - vraag: "Hoe snel krijg ik antwoord?"
-    antwoord: "[Binnen hoeveel tijd je gewoonlijk antwoordt, bijvoorbeeld binnen twee werkdagen.]"
-  - vraag: "Werken jullie alleen in [plaats]?"
-    antwoord: "[In welke regio Foonkyfish werkt, en of je ook op afstand of op locatie werkt.]"
-  - vraag: "Wat kost het?"
-    antwoord: "[Hoe je prijzen opbouwt. Verwijs eventueel naar de pagina Aanbod.]"
-  - vraag: "Kan ik eerst eens vrijblijvend kennismaken?"
-    antwoord: "[Of en hoe een eerste kennismaking werkt: een gesprek, een koffie, een telefoontje.]"
+    antwoord: "[Binnen hoeveel tijd jullie gewoonlijk antwoorden, bijvoorbeeld binnen twee werkdagen.]"
+  - vraag: "Werken jullie alleen in België?"
+    antwoord: "[Of jullie ook voor klanten buiten België werken, en of dat op afstand gebeurt.]"
 ---
 
-Mail, bel of stuur een berichtje via Instagram. Vertel kort wat je zoekt, dan zwemmen wij terug met een antwoord.
+Vertel ons kort wat je wilt bouwen of wat er slimmer kan. Mail, bel of stuur een berichtje, dan zwemmen we terug met een antwoord.

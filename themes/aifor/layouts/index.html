@@ -33,7 +33,7 @@
   <div>
     <h2 class="sectie-titel">{{ $.Params.netTitel }}</h2>
     <ol class="menukaart menukaart-kort">
-      {{ range first 3 .Params.items }}
+      {{ range .Params.items }}
       <li>
         <span class="mk-nr">{{ .nr }}</span>
         <span class="mk-naam">{{ .naam }}</span>
@@ -55,8 +55,29 @@
 
 {{ partial "golf.html" "van-koraal naar-diep" }}
 
+{{ with site.Data.producten }}
+<section class="raster sectie producten" aria-labelledby="producten-titel">
+  <p class="label kantlabel"><span class="nr">03</span> Eigen producten</p>
+  <div>
+    <h2 id="producten-titel" class="sectie-titel">{{ $.Params.producten.titel }}</h2>
+    <p class="producten-intro">{{ $.Params.producten.tekst }}</p>
+    <ul class="productlijst">
+      {{ range . }}
+      <li>
+        <h3 class="product-naam">{{ .naam }}</h3>
+        <div class="product-wat">
+          <p>{{ .tekst }}</p>
+          {{ $naam := .naam }}{{ with .url }}<a class="pijl-link" href="{{ . }}">Ontdek {{ $naam }} {{ partial "fish.html" "link-vis" }}</a>{{ end }}
+        </div>
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+</section>
+{{ end }}
+
 <section class="raster sectie haptoe">
-  <p class="label kantlabel"><span class="nr">03</span> Contact</p>
+  <p class="label kantlabel"><span class="nr">04</span> Contact</p>
   <div class="haptoe-blok">
     <h2 class="haptoe-titel">{{ .Params.haptoe.kop }}</h2>
     <p class="haptoe-tekst">{{ .Params.haptoe.tekst }}</p>
