@@ -15,12 +15,9 @@
         {{ with site.Params.instagram }}<div><dt>Instagram</dt><dd>{{ . }}</dd></div>{{ end }}
         {{ with site.Params.ondernemingsnummer }}<div><dt>Ondernemingsnr.</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
-      {{ with resources.Get "images/vis.jpg" }}
-      {{ $s := .Fill "360x360 webp q75" }}{{ $l := .Fill "720x720 webp q75" }}
       <figure class="poort contact-poort">
-        <img src="{{ $s.RelPermalink }}" srcset="{{ $s.RelPermalink }} 360w, {{ $l.RelPermalink }} 720w" sizes="(min-width: 900px) 220px, 40vw" width="{{ $s.Width }}" height="{{ $s.Height }}" alt="De Foonkyfish-vis, een koraalkleurige illustratievis, kijkt door een ronde patrijspoort" loading="lazy">
+        {{ partial "poort.html" (dict "id" "contact" "label" "Abstracte illustratie van golvende banden in koraal, geel en zeegroen in een ronde patrijspoort") }}
       </figure>
-      {{ end }}
     </div>
   </section>
 

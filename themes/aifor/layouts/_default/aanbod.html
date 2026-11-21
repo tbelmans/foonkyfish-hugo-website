@@ -33,7 +33,7 @@
     <ol class="stappen">
       {{ range $i, $s := .Params.stappen }}
       <li>
-        <span class="stap-nr">{{ add $i 1 }}</span>
+        <span class="stap-nr">{{ printf "%02d" (add $i 1) }}</span>
         <h3 class="stap-kop">{{ $s.kop }}</h3>
         <p>{{ $s.tekst }}</p>
       </li>
