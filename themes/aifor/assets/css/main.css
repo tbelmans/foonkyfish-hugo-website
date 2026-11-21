@@ -31,7 +31,7 @@ img { display: block; max-width: 100%; height: auto; }
 a { color: var(--koraal); text-underline-offset: .2em; text-decoration-thickness: 2px; }
 a:hover { color: var(--zon); }
 :focus-visible { outline: 3px solid var(--zon); outline-offset: 3px; border-radius: 4px; }
-h1, h2, h3 { margin: 0; font-weight: 400; }
+h1, h2, h3 { margin: 0; font-weight: 400; text-wrap: balance; }
 p { margin: 0 0 1em; }
 ol, ul { margin: 0; padding: 0; }
 
@@ -488,6 +488,11 @@ a.mk-naam:hover { color: var(--koraal); }
 .voet-nav a:hover { color: var(--koraal); text-decoration: underline wavy; }
 .voet-contact li { color: var(--room-zacht); overflow-wrap: anywhere; }
 .voet-klein { max-width: 1280px; margin: 3rem auto 0; padding-top: 1.25rem; border-top: 1px solid var(--lijn); font-size: .85rem; color: var(--room-zacht); }
+
+@media (max-width: 1000px) {
+  .menukaart li { grid-template-columns: 3.5rem minmax(0, 1fr); }
+  .mk-tekst { grid-column: 2; margin-top: .4rem; }
+}
 
 /* Small screens */
 @media (max-width: 760px) {
