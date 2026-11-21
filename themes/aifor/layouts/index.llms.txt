@@ -1,0 +1,12 @@
+# {{ site.Title }}
+
+> {{ site.Params.tagline }}. {{ site.Params.description }}
+
+{{ with site.Home.Description }}{{ . }}{{ end }}
+
+## Pagina's
+
+- [{{ site.Home.Title }}]({{ site.Home.Permalink }}): {{ site.Home.Description }}
+{{ range where site.RegularPages "Params.excludeFromLlms" "!=" true -}}
+- [{{ .Title }}]({{ .Permalink }}): {{ .Description }}
+{{ end }}

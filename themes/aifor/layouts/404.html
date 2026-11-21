@@ -1,0 +1,8 @@
+{{ define "main" }}
+<section class="niet-gevonden">
+  <p class="label">Fout 404</p>
+  <h1 class="nf-titel">Deze vis is ontsnapt.</h1>
+  <p class="pagina-intro">De pagina die je zoekt, zwemt hier niet (meer). Misschien vind je ze terug via de homepage.</p>
+  <a class="knop" href="{{ site.Home.RelPermalink }}">Terug naar de vijver {{ partial "fish.html" "knop-vis" }}</a>
+</section>
+{{ end }}

@@ -1,0 +1,26 @@
+{{ define "main" }}
+<section class="pagina">
+  <header class="pagina-kop raster">
+    <p class="label kantlabel">{{ site.Title }}</p>
+    <div>
+      <h1 class="pagina-titel">{{ .Title }}</h1>
+      {{ with .Description }}<p class="pagina-intro">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="raster sectie">
+    <span></span>
+    <div>
+      {{ with .Content }}<div class="prose">{{ . }}</div>{{ end }}
+      <ol class="menukaart">
+        {{ range $i, $p := .Pages }}
+        <li>
+          <span class="mk-nr">{{ printf "%02d" (add $i 1) }}</span>
+          <a class="mk-naam" href="{{ $p.RelPermalink }}">{{ $p.Title }}</a>
+          <span class="mk-tekst">{{ $p.Description }}</span>
+        </li>
+        {{ end }}
+      </ol>
+    </div>
+  </div>
+</section>
+{{ end }}

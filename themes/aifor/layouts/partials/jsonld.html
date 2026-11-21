@@ -1,0 +1,18 @@
+{{- $org := dict
+  "@context" "https://schema.org"
+  "@type" "Organization"
+  "name" site.Title
+  "url" site.Home.Permalink
+  "description" site.Params.description
+  "slogan" site.Params.tagline
+-}}
+{{- with site.Params.email }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "email" .) }}{{ end }}{{ end -}}
+{{- with site.Params.telefoon }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "telephone" .) }}{{ end }}{{ end -}}
+{{- with site.Params.adres }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "address" .) }}{{ end }}{{ end -}}
+{{- with site.Params.ondernemingsnummer }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "vatID" .) }}{{ end }}{{ end -}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+{{- with .Params.faq }}
+{{- $items := slice }}
+{{- range . }}{{ $items = $items | append (dict "@type" "Question" "name" .vraag "acceptedAnswer" (dict "@type" "Answer" "text" .antwoord)) }}{{ end }}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $items | jsonify | safeJS }}</script>
+{{- end }}

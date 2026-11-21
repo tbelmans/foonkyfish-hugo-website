@@ -1,0 +1,50 @@
+{{ define "main" }}
+<article class="over">
+  <header class="over-kop">
+    <p class="label">Over ons</p>
+    <h1 class="over-titel">{{ .Params.kop | default .Title }}</h1>
+    <div class="over-intro prose groot">{{ .Content }}</div>
+  </header>
+
+  <section class="raster sectie hoofdstukken" aria-labelledby="hoofdstukken-titel">
+    <div class="kantlabel plak">
+      <p class="label">Het verhaal</p>
+      <h2 id="hoofdstukken-titel" class="sectie-titel klein">In vier slagen</h2>
+    </div>
+    <ol class="tijdlijn">
+      {{ range .Params.hoofdstukken }}
+      <li>
+        <span class="tl-nr" aria-hidden="true">{{ .nr }}</span>
+        <div>
+          <h3 class="tl-titel">{{ .titel }}</h3>
+          <p>{{ .tekst }}</p>
+        </div>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  {{ with .Params.citaat }}
+  <figure class="citaat">
+    <blockquote><p>{{ .tekst }}</p></blockquote>
+    <figcaption>{{ .wie }}</figcaption>
+  </figure>
+  {{ end }}
+
+  {{ partial "golf.html" (cond (isset .Params "citaat") "van-diepst naar-koraal" "naar-koraal") }}
+  <section class="vlak-koraal waarden" aria-labelledby="waarden-titel">
+    <p class="label">Waar we op zwemmen</p>
+    <h2 id="waarden-titel" class="visueel-verborgen">Waar we in geloven</h2>
+    <ul class="waarden-lijst">
+      {{ range .Params.waarden }}
+      <li><span class="w-kop">{{ .kop }}</span><span class="w-tekst">{{ .tekst }}</span></li>
+      {{ end }}
+    </ul>
+  </section>
+  {{ partial "golf.html" "van-koraal naar-diep" }}
+
+  {{ with site.GetPage "/contact" }}
+  <p class="doorzwemmen raster"><span></span><a class="pijl-link groot" href="{{ .RelPermalink }}">Zin om samen te zwemmen? Hap toe {{ partial "fish.html" "link-vis" }}</a></p>
+  {{ end }}
+</article>
+{{ end }}

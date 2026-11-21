@@ -1,0 +1,66 @@
+{{ define "main" }}
+{{ $aanbod := site.GetPage "/aanbod" }}
+{{ $contact := site.GetPage "/contact" }}
+<section class="hero">
+  <p class="label hero-kicker">{{ .Params.hero.kicker }}</p>
+  <h1 class="hero-titel"><span class="hero-foonky">Foonky</span><span class="hero-fish">fish</span></h1>
+  {{ with resources.Get "images/vis.jpg" }}
+  {{ $s := .Resize "480x webp q78" }}{{ $m := .Resize "800x webp q78" }}{{ $l := .Resize "1200x webp q78" }}
+  <figure class="poort hero-poort">
+    <img src="{{ $m.RelPermalink }}" srcset="{{ $s.RelPermalink }} 480w, {{ $m.RelPermalink }} 800w, {{ $l.RelPermalink }} 1200w" sizes="(min-width: 900px) 40vw, 78vw" width="{{ $m.Width }}" height="{{ $m.Height }}" alt="Illustratie in jaren-zeventigstijl van een vrolijke koraalkleurige vis met golvende vinnen die tussen gele en groene golven naar boven zwemt" fetchpriority="high">
+  </figure>
+  {{ end }}
+  <div class="hero-tekst">
+    <p class="hero-lijn">{{ .Params.hero.lijn }}</p>
+    <p class="hero-intro">{{ .Params.hero.intro }}</p>
+    {{ with $aanbod }}<a class="knop" href="{{ .RelPermalink }}">{{ $.Params.hero.knop }} {{ partial "fish.html" "knop-vis" }}</a>{{ end }}
+  </div>
+</section>
+
+{{ partial "golf.html" "naar-diep" }}
+
+<section class="raster sectie watis">
+  <p class="label kantlabel"><span class="nr">01</span> {{ .Params.watis.label }}</p>
+  <div class="watis-tekst">
+    <h2 class="sectie-titel">{{ .Params.watis.titel }}</h2>
+    <div class="prose groot">{{ .Content }}</div>
+  </div>
+</section>
+
+{{ with $aanbod }}
+<section class="raster sectie teaser">
+  <p class="label kantlabel"><span class="nr">02</span> Het aanbod</p>
+  <div>
+    <h2 class="sectie-titel">{{ $.Params.netTitel }}</h2>
+    <ol class="menukaart menukaart-kort">
+      {{ range first 3 .Params.items }}
+      <li>
+        <span class="mk-nr">{{ .nr }}</span>
+        <span class="mk-naam">{{ .naam }}</span>
+        <span class="mk-tekst">{{ .kort }}</span>
+      </li>
+      {{ end }}
+    </ol>
+    <a class="pijl-link" href="{{ .RelPermalink }}">Het hele aanbod {{ partial "fish.html" "link-vis" }}</a>
+  </div>
+</section>
+{{ end }}
+
+{{ partial "golf.html" "naar-koraal" }}
+
+<section class="vlak-koraal statement">
+  <h2 class="statement-tekst">{{ .Params.statement.kop | markdownify }}</h2>
+  <p class="statement-onder">{{ .Params.statement.tekst }}</p>
+</section>
+
+{{ partial "golf.html" "van-koraal naar-diep" }}
+
+<section class="raster sectie haptoe">
+  <p class="label kantlabel"><span class="nr">03</span> Contact</p>
+  <div class="haptoe-blok">
+    <h2 class="haptoe-titel">{{ .Params.haptoe.kop }}</h2>
+    <p class="haptoe-tekst">{{ .Params.haptoe.tekst }}</p>
+    {{ with $contact }}<a class="knop" href="{{ .RelPermalink }}">{{ $.Params.haptoe.knop }} {{ partial "fish.html" "knop-vis" }}</a>{{ end }}
+  </div>
+</section>
+{{ end }}

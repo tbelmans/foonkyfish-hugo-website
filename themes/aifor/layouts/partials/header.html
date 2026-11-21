@@ -1,0 +1,13 @@
+<header class="kop">
+  <a class="merk" href="{{ site.Home.RelPermalink }}" aria-label="{{ site.Title }}, naar de homepage">
+    {{ partial "fish.html" "merk-vis" }}<span>{{ site.Title }}</span>
+  </a>
+  <nav class="nav" aria-label="Hoofdmenu">
+    <ul>
+      {{ $current := . }}
+      {{ range site.Menus.main }}
+      <li><a href="{{ .URL }}"{{ if $current.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+      {{ end }}
+    </ul>
+  </nav>
+</header>

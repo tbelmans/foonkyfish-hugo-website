@@ -1,0 +1,44 @@
+{{ define "main" }}
+<article class="contact">
+  <section class="contact-split">
+    <div class="contact-groot">
+      <p class="label">{{ .Title }}</p>
+      <h1 class="contact-titel">{{ .Params.kop | default .Title }}</h1>
+      <div class="prose groot">{{ .Content }}</div>
+    </div>
+    <div class="contact-gegevens">
+      <h2 class="label">Zo vind je ons</h2>
+      <dl class="gegevens">
+        <div><dt>E-mail</dt><dd>{{ site.Params.email }}</dd></div>
+        <div><dt>Telefoon</dt><dd>{{ site.Params.telefoon }}</dd></div>
+        <div><dt>Adres</dt><dd>{{ site.Params.adres }}</dd></div>
+        <div><dt>Instagram</dt><dd>{{ site.Params.instagram }}</dd></div>
+        <div><dt>Ondernemingsnr.</dt><dd>{{ site.Params.ondernemingsnummer }}</dd></div>
+      </dl>
+      {{ with resources.Get "images/vis.jpg" }}
+      {{ $s := .Fill "360x360 webp q75" }}{{ $l := .Fill "720x720 webp q75" }}
+      <figure class="poort contact-poort">
+        <img src="{{ $s.RelPermalink }}" srcset="{{ $s.RelPermalink }} 360w, {{ $l.RelPermalink }} 720w" sizes="(min-width: 900px) 220px, 40vw" width="{{ $s.Width }}" height="{{ $s.Height }}" alt="De Foonkyfish-vis, een koraalkleurige illustratievis, kijkt door een ronde patrijspoort" loading="lazy">
+      </figure>
+      {{ end }}
+    </div>
+  </section>
+
+  {{ with .Params.faq }}
+  <section class="raster sectie faq" aria-labelledby="faq-titel">
+    <div class="kantlabel">
+      <p class="label">Vragen</p>
+      <h2 id="faq-titel" class="sectie-titel klein">Wat je je misschien afvraagt</h2>
+    </div>
+    <div class="faq-lijst">
+      {{ range . }}
+      <details>
+        <summary>{{ partial "fish.html" "faq-vis" }}<span>{{ .vraag }}</span></summary>
+        <p>{{ .antwoord }}</p>
+      </details>
+      {{ end }}
+    </div>
+  </section>
+  {{ end }}
+</article>
+{{ end }}

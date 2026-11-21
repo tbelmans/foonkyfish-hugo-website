@@ -1,0 +1,44 @@
+baseURL = "https://hugo.foonkyfish.be/"
+languageCode = "nl-BE"
+defaultContentLanguage = "nl"
+title = "Foonkyfish"
+theme = "aifor"
+enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
+
+[params]
+  tagline = "Een vis die swingt"
+  description = "Foonkyfish is [wat Foonkyfish doet] voor [voor wie]. Een vis die tegen de stroom in zwemt, op zijn eigen ritme."
+  email = "[e-mailadres]"
+  telefoon = "[telefoonnummer]"
+  adres = "[adres]"
+  plaats = "[plaats]"
+  ondernemingsnummer = "[ondernemingsnummer]"
+  instagram = "[Instagram-account]"
+
+[outputFormats.llms]
+  mediaType = "text/plain"
+  baseName = "llms"
+  isPlainText = true
+  notAlternative = true
+
+[outputs]
+  home = ["HTML", "RSS", "llms"]
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[[menus.main]]
+  name = "Aanbod"
+  pageRef = "/aanbod"
+  weight = 10
+
+[[menus.main]]
+  name = "Over"
+  pageRef = "/over"
+  weight = 20
+
+[[menus.main]]
+  name = "Contact"
+  pageRef = "/contact"
+  weight = 30

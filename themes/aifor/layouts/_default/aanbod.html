@@ -1,0 +1,49 @@
+{{ define "main" }}
+<article class="aanbod">
+  <header class="aanbod-kop raster">
+    <p class="label kantlabel">Op de kaart</p>
+    <div>
+      <h1 class="pagina-titel">{{ .Params.kop | default .Title }}</h1>
+      <div class="pagina-intro prose">{{ .Content }}</div>
+    </div>
+  </header>
+
+  <section class="sectie aanbod-kaart" aria-labelledby="kaart-titel">
+    <h2 id="kaart-titel" class="visueel-verborgen">Alles op een rij</h2>
+    <ol class="kaart">
+      {{ range .Params.items }}
+      <li class="kaart-rij">
+        <span class="kaart-nr" aria-hidden="true">{{ .nr }}</span>
+        <div class="kaart-wat">
+          <h3 class="kaart-naam">{{ .naam }}</h3>
+          <p>{{ .tekst }}</p>
+        </div>
+        <p class="kaart-prijs"><span class="label">Prijs</span> {{ .prijs }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+
+  {{ partial "golf.html" "naar-diepst" }}
+  <section class="stappen-blok" aria-labelledby="stappen-titel">
+    <div class="raster">
+      <p class="label kantlabel">Zo zwemt het</p>
+      <h2 id="stappen-titel" class="sectie-titel">{{ .Params.stappenTitel }}</h2>
+    </div>
+    <ol class="stappen">
+      {{ range $i, $s := .Params.stappen }}
+      <li>
+        <span class="stap-nr">{{ add $i 1 }}</span>
+        <h3 class="stap-kop">{{ $s.kop }}</h3>
+        <p>{{ $s.tekst }}</p>
+      </li>
+      {{ end }}
+    </ol>
+  </section>
+  {{ partial "golf.html" "van-diepst naar-diep" }}
+
+  {{ with site.GetPage "/contact" }}
+  <p class="doorzwemmen raster"><span></span><a class="pijl-link groot" href="{{ .RelPermalink }}">Iets anders in gedachten? Hap toe {{ partial "fish.html" "link-vis" }}</a></p>
+  {{ end }}
+</article>
+{{ end }}

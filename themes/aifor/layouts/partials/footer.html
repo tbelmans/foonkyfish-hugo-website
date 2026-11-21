@@ -1,0 +1,26 @@
+{{ partial "golf.html" "naar-diepst" }}
+<footer class="voet">
+  <div class="voet-zwem" aria-hidden="true"><span>&gt;&lt;(((º&gt;</span></div>
+  <div class="voet-raster">
+    <div class="voet-merk">
+      <p class="voet-naam">{{ site.Title }}</p>
+      <p class="voet-tag">{{ site.Params.tagline }}. Tegen de stroom in, op de groove.</p>
+    </div>
+    <nav class="voet-nav" aria-label="Voettekstmenu">
+      <p class="label">Zwem naar</p>
+      <ul>
+        <li><a href="{{ site.Home.RelPermalink }}">Home</a></li>
+        {{ range site.Menus.main }}<li><a href="{{ .URL }}">{{ .Name }}</a></li>{{ end }}
+      </ul>
+    </nav>
+    <div class="voet-contact">
+      <p class="label">Hap toe</p>
+      <ul>
+        <li>{{ site.Params.email }}</li>
+        <li>{{ site.Params.telefoon }}</li>
+        <li>{{ site.Params.instagram }}</li>
+      </ul>
+    </div>
+  </div>
+  <p class="voet-klein">© {{ now.Year }} {{ site.Title }} · {{ site.Params.ondernemingsnummer }}</p>
+</footer>

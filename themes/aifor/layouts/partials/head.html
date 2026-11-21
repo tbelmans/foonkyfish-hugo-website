@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{- $title := "" -}}
+{{- with .Params.seotitle -}}{{ $title = . }}{{- else -}}{{- if .IsHome -}}{{ $title = printf "%s — %s" site.Title site.Params.tagline }}{{- else -}}{{ $title = printf "%s · %s" .Title site.Title }}{{- end -}}{{- end }}
+{{- $desc := .Description | default site.Params.description }}
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta name="theme-color" content="#0d2f3f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:locale" content="nl_BE">
+{{ with resources.Get "images/vis.jpg" }}{{ $og := .Fill "1200x630 Center jpg q80" }}<meta property="og:image" content="{{ $og.Permalink }}">{{ end }}
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='16' fill='%230d2f3f'/%3E%3Cpath d='M4 16c3-6 11-7 16-2l7-5-2 7 2 7-7-5c-5 5-13 4-16-2z' fill='%23ff6a3d'/%3E%3Ccircle cx='10' cy='14.5' r='1.6' fill='%230d2f3f'/%3E%3C/svg%3E">
+{{ partial "aifor-fonts.html" . }}
+{{ $css := resources.Get "css/main.css" | minify | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" href="{{ .RelPermalink }}" title="{{ site.Title }}">{{ end }}
+{{ partial "jsonld.html" . }}

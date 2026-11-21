@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode | default "nl-BE" }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body class="{{ if .IsHome }}is-home{{ else }}is-{{ .Layout | default .Type }}{{ end }}">
+  <a class="skip" href="#inhoud">Naar de inhoud</a>
+  {{ partial "header.html" . }}
+  <main id="inhoud">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+</body>
+</html>
