@@ -155,6 +155,12 @@ ol, ul { margin: 0; padding: 0; }
 .golf.naar-koraal .g4 { fill: var(--koraal); }
 .golf.naar-diepst .g4 { fill: var(--diepst); }
 .golf.naar-diep .g4 { fill: var(--diep); }
+/* bottom edge in the next section's colour, so no hairline seam shows under the wave */
+.golf.van-koraal { background: linear-gradient(var(--koraal) calc(100% - 3px), var(--diep) 0); }
+.golf.van-diepst { background: linear-gradient(var(--diepst) calc(100% - 3px), var(--diep) 0); }
+.golf.naar-diepst { background: linear-gradient(var(--diep) calc(100% - 3px), var(--diepst) 0); }
+.golf.naar-koraal { background: linear-gradient(var(--diep) calc(100% - 3px), var(--koraal) 0); }
+.golf.van-diepst.naar-koraal { background: linear-gradient(var(--diepst) calc(100% - 3px), var(--koraal) 0); }
 
 /* Colour field */
 .vlak-koraal { background: var(--koraal); color: var(--diep); }
