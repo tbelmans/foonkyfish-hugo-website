@@ -1,7 +1,7 @@
 ---
 title: "Contact"
 kop: "Hap toe."
-description: "Een idee voor een app, SaaS of AI-toepassing? Neem contact op met Foonkyfish via [e-mailadres] of [telefoonnummer]. We denken graag met je mee."
+description: "Een idee voor een app, SaaS of AI-toepassing? Mail Foonkyfish op web@foonkyfish.be of bel 0484 66 50 71. We denken graag met je mee."
 layout: "contact"
 url: "/contact/"
 faq:
@@ -17,4 +17,4 @@ faq:
     antwoord: "[Of jullie ook voor klanten buiten België werken, en of dat op afstand gebeurt.]"
 ---
 
-Vertel ons kort wat je wilt bouwen of wat er slimmer kan. Mail, bel of stuur een berichtje, dan zwemmen we terug met een antwoord.
+Vertel ons kort wat je wilt bouwen of wat er slimmer kan. Mail naar **web@foonkyfish.be** of bel **0484 66 50 71**, dan zwemmen we terug met een antwoord.

@@ -9,11 +9,11 @@
     <div class="contact-gegevens">
       <h2 class="label">Zo vind je ons</h2>
       <dl class="gegevens">
-        <div><dt>E-mail</dt><dd>{{ site.Params.email }}</dd></div>
-        <div><dt>Telefoon</dt><dd>{{ site.Params.telefoon }}</dd></div>
-        <div><dt>Adres</dt><dd>{{ site.Params.adres }}</dd></div>
-        <div><dt>Instagram</dt><dd>{{ site.Params.instagram }}</dd></div>
-        <div><dt>Ondernemingsnr.</dt><dd>{{ site.Params.ondernemingsnummer }}</dd></div>
+        <div><dt>E-mail</dt><dd><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></dd></div>
+        <div><dt>Telefoon</dt><dd><a href="tel:{{ site.Params.telefoonIntl }}">{{ site.Params.telefoon }}</a></dd></div>
+        {{ with site.Params.adres }}<div><dt>Adres</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with site.Params.instagram }}<div><dt>Instagram</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{ with site.Params.ondernemingsnummer }}<div><dt>Ondernemingsnr.</dt><dd>{{ . }}</dd></div>{{ end }}
       </dl>
       {{ with resources.Get "images/vis.jpg" }}
       {{ $s := .Fill "360x360 webp q75" }}{{ $l := .Fill "720x720 webp q75" }}

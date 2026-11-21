@@ -16,11 +16,11 @@
     <div class="voet-contact">
       <p class="label">Hap toe</p>
       <ul>
-        <li>{{ site.Params.email }}</li>
-        <li>{{ site.Params.telefoon }}</li>
-        <li>{{ site.Params.instagram }}</li>
+        <li><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></li>
+        <li><a href="tel:{{ site.Params.telefoonIntl }}">{{ site.Params.telefoon }}</a></li>
+        {{ with site.Params.instagram }}<li>{{ . }}</li>{{ end }}
       </ul>
     </div>
   </div>
-  <p class="voet-klein">© {{ now.Year }} {{ site.Title }} · {{ site.Params.ondernemingsnummer }}</p>
+  <p class="voet-klein">© {{ now.Year }} {{ site.Title }}{{ with site.Params.ondernemingsnummer }} · {{ . }}{{ end }}</p>
 </footer>

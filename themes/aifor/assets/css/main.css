@@ -273,6 +273,11 @@ a.mk-naam:hover { color: var(--koraal); }
 }
 .productlijst li:hover .product-naam { color: var(--room); }
 .product-wat p { color: var(--room-zacht); margin-bottom: .5rem; }
+.product-wat .label { color: var(--koraal); margin-bottom: .6rem; }
+.product-wat .product-kop { font-family: var(--display); font-size: clamp(1.35rem, 1.1rem + .9vw, 1.9rem); line-height: 1.1; color: var(--room); margin-bottom: .75rem; }
+.haptoe-direct { display: flex; flex-wrap: wrap; gap: .25rem 2rem; margin-bottom: 2rem; }
+.haptoe-direct a { display: inline-flex; align-items: center; min-height: 44px; font-family: var(--display); font-size: clamp(1.4rem, 1rem + 1.6vw, 2.4rem); text-decoration: none; }
+.haptoe-direct a:hover { text-decoration: underline wavy; text-decoration-thickness: 2px; }
 @media (max-width: 760px) { .productlijst li { grid-template-columns: minmax(0, 1fr); } }
 
 /* Generic page */

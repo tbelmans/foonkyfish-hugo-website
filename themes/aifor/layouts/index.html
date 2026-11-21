@@ -66,6 +66,8 @@
       <li>
         <h3 class="product-naam">{{ .naam }}</h3>
         <div class="product-wat">
+          <p class="label">Een app van Foonkyfish</p>
+          {{ with .kop }}<p class="product-kop">{{ . }}</p>{{ end }}
           <p>{{ .tekst }}</p>
           {{ $naam := .naam }}{{ with .url }}<a class="pijl-link" href="{{ . }}">Ontdek {{ $naam }} {{ partial "fish.html" "link-vis" }}</a>{{ end }}
         </div>
@@ -81,6 +83,10 @@
   <div class="haptoe-blok">
     <h2 class="haptoe-titel">{{ .Params.haptoe.kop }}</h2>
     <p class="haptoe-tekst">{{ .Params.haptoe.tekst }}</p>
+    <p class="haptoe-direct">
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      <a href="tel:{{ site.Params.telefoonIntl }}">{{ site.Params.telefoon }}</a>
+    </p>
     {{ with $contact }}<a class="knop" href="{{ .RelPermalink }}">{{ $.Params.haptoe.knop }} {{ partial "fish.html" "knop-vis" }}</a>{{ end }}
   </div>
 </section>

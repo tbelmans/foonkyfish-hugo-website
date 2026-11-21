@@ -7,7 +7,7 @@
   "slogan" site.Params.tagline
 -}}
 {{- with site.Params.email }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "email" .) }}{{ end }}{{ end -}}
-{{- with site.Params.telefoon }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "telephone" .) }}{{ end }}{{ end -}}
+{{- with site.Params.telefoonIntl }}{{ $org = merge $org (dict "telephone" .) }}{{ end -}}
 {{- with site.Params.adres }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "address" .) }}{{ end }}{{ end -}}
 {{- with site.Params.ondernemingsnummer }}{{ if not (strings.HasPrefix . "[") }}{{ $org = merge $org (dict "vatID" .) }}{{ end }}{{ end -}}
 <script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>

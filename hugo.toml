@@ -9,8 +9,9 @@ disableKinds = ["taxonomy", "term"]
 [params]
   tagline = "Apps die ideeën vooruithelpen"
   description = "Foonkyfish is een Belgisch softwarebedrijf dat apps en software op maat bouwt: webapps, SaaS-platformen, AI-toepassingen en WordPress."
-  email = "[e-mailadres]"
-  telefoon = "[telefoonnummer]"
+  email = "web@foonkyfish.be"
+  telefoon = "0484 66 50 71"
+  telefoonIntl = "+32484665071"
   adres = "[adres]"
   plaats = "[plaats]"
   ondernemingsnummer = "[ondernemingsnummer]"
